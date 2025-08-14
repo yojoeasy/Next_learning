@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <Link href="/articles/breaking-news?lang=en">Read in English</Link>
+        <Link href="/articles/breaking-news?lang=fr">Read in French</Link>
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -20,8 +23,9 @@ export default function Home() {
             </code>
             .
           </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+          <li className="tracking-[-.01em] bg-amber-400 dark:bg-amber-600/50 px-2 py-1 rounded">
+            {/* Save and see your changes instantly. */}
+            Hello World! This is a Next.js app with Tailwind CSS.
           </li>
         </ol>
 
